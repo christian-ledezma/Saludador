@@ -8,6 +8,13 @@
     <form id="saludar">
       <label for="nombre">Ingrese nombre:</label>
       <input type="string" id="nombre" />
+      <label for="genero">Ingrese su genero: </label>
+      <select id="genero" required>
+        <option value="" disabled selected>Seleccione opcion</option>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+      </select>
+      
       <input type="submit" value="saludar" id="saludar-button" />
     </form>
     <div id="resultado-saludar"></div>
