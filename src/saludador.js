@@ -1,10 +1,10 @@
 import obtenerTituloPersona from "./titulo-persona.js";
 
-function saludar(nombre, genero){
+function saludar(nombre, genero, edad){
     let fechaActual = new Date();
     let horaActual = fechaActual.getHours();
-    let titulo = obtenerTituloPersona(genero);
-    if(nombre){
+    let titulo = obtenerTituloPersona(genero, edad);
+    if(nombre && genero && !isNaN(edad) && edad > 0){
         if(horaActual >= 0 && horaActual < 12){
             return `Buenos dias ${titulo} ${nombre}!`;
         }
@@ -16,7 +16,7 @@ function saludar(nombre, genero){
         }
     }
     else{
-        return `Ingresar nombre por favor!`
+        return `Por favor ingrese los datos correctamente!`
     }
     
 }

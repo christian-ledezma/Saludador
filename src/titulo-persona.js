@@ -1,9 +1,19 @@
-function obtenerTituloPersona(genero){
+function obtenerTituloPersona(genero, edad){
     if(genero === "masculino"){
-        return `amigo`;
+        if(edad > 30){
+            return `Sr.`
+        }
+        else{
+            return `amigo`;
+        } 
     }
     else if(genero === "femenino"){
-        return `amiga`;
+        if(edad > 30){
+            return `Sra.`
+        }
+        else{
+            return `amiga`;
+        } 
     }
 }
 
