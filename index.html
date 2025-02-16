@@ -4,6 +4,14 @@
     <title>Saludador</title>
   </head>
   <body>
-    <h1>Hola</h1>
+    <h1>Saludo inicial</h1>
+    <form id="saludar">
+      <label for="nombre">Ingrese nombre:</label>
+      <input type="string" id="nombre" />
+      <input type="submit" value="saludar" id="saludar-button" />
+    </form>
+    <div id="resultado-saludar"></div>
+
+    <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>
