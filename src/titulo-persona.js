@@ -1,20 +1,24 @@
-function obtenerTituloPersona(genero, edad){
+function obtenerTituloPersona(genero, edad, idioma){
+    let saludo;
     if(genero === "masculino"){
         if(edad > 30){
-            return `Sr.`
+            saludo = idioma === "ingles" ? `Mr.` : `Sr.`;
         }
         else{
-            return `amigo`;
+            saludo = idioma === "ingles" ? `my friend` : `amigo`;
         } 
     }
     else if(genero === "femenino"){
         if(edad > 30){
-            return `Sra.`
+            saludo = idioma === "ingles" ? `Mrs.` : `Sra.`;
         }
         else{
-            return `amiga`;
+            saludo = idioma === "ingles" ? `Miss` : `amiga`;
         } 
+
+
     }
+    return saludo;
 }
 
 export default obtenerTituloPersona;
